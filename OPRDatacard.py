@@ -1126,16 +1126,24 @@ def getWeapon(data, modCount=-1):
     return weapon
 
 def removeItem(removeItems: list, count: int, originalItems: dict, type=""):
-    logger.debug(f'{removeItems} from {type}') 
+    logger.debug(f'{removeItems} from {type}')
     for remove in removeItems:
+        if re.search(r'^\d+x\s', remove): # Items with x in Name
+            anz = int(remove.split("x")[0])
+            remove_anz = count + anz
+        else:
+            remove_anz = count
+
         for i in range(len(originalItems)):
             remove = remove.strip()
+            remove = re.sub(f'\d+x\s', "", remove)
             group = [remove, remove + "s", remove[:-1]]
+            logger.debug(f'Remove: {remove}, Group: {group} anz: {count}')
             if re.match(r'^(' + "|".join(group) + ')$', originalItems[i]['name'].strip()):
-                if ('count' not in originalItems[i] or count == "any" or count == None or originalItems[i]['count'] == 1):
+                if ('count' not in originalItems[i] or remove_anz == "any" or remove_anz == None or originalItems[i]['count'] == 1):
                     originalItems.pop(i)
                 else:
-                    originalItems[i]['count'] -= count
+                    originalItems[i]['count'] -= remove_anz
                     if originalItems[i]['count'] <= 0:
                         originalItems.pop(i)
                 break

@@ -1,0 +1,80 @@
+{
+    "armyId": "ukrBO4ITaKUpUFeO",
+    "gameSystem": "gff",
+    "gameSystemId": 3,
+    "armyVersions": [
+        {
+            "version": "3.4.1",
+            "armyId": "ukrBO4ITaKUpUFeO"
+        }
+    ],
+    "armyName": "Security Forces",
+    "listPoints": 85,
+    "listName": "Security Forces",
+    "units": [
+        {
+            "type": "Security Veteran Fighters",
+            "name": "Security Veteran Fighters",
+            "armyId": "ukrBO4ITaKUpUFeO",
+            "id": "I2Syvun",
+            "cost": 40,
+            "defense": 5,
+            "quality": 4,
+            "upgrades": [
+                "c7_d5"
+            ],
+            "size": 3,
+            "notes": null,
+            "weapons": [
+                {
+                    "attacks": 2,
+                    "count": 3,
+                    "name": "Shock Weapon",
+                    "specialRules": [
+                        {
+                            "id": "F4aO_9oN1Ub8",
+                            "name": "Taser",
+                            "type": "ArmyBookRule",
+                            "label": "Taser"
+                        }
+                    ]
+                },
+                {
+                    "attacks": 2,
+                    "count": 2,
+                    "name": "Shotgun",
+                    "range": 12,
+                    "specialRules": [],
+                    "ap": 1
+                },
+                {
+                    "attacks": 1,
+                    "count": 1,
+                    "name": "Plasma Pistol",
+                    "range": 12,
+                    "specialRules": [],
+                    "ap": 4
+                }
+            ],
+            "equipment": [],
+            "rules": [
+                {
+                    "id": "2atvlmICQSCV",
+                    "name": "Fearless",
+                    "label": "Fearless"
+                }
+            ],
+            "upgradeCost": [
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+            ]
+        }
+    ]
+}
