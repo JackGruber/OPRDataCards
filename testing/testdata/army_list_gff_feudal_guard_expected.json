@@ -28,7 +28,7 @@
             "notes": null,
             "weapons": [
                 {
-                    "attacks": "2",
+                    "attacks": 2,
                     "count": 1,
                     "name": "Cpt. Heavy Rifle",
                     "range": 24,
